@@ -39,7 +39,16 @@
           "microphonePermission": false
         }
       ],
-      "expo-secure-store"
+      "expo-secure-store",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "1.9.25",
+            "newArchEnabled": true
+          }
+        }
+      ]
     ],
     "scheme": "tncan",
     "extra": {
