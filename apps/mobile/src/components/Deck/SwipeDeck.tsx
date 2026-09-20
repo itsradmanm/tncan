@@ -16,7 +16,7 @@ import {
   StyleSheet,
   Dimensions,
 } from 'react-native';
-import { useSharedValue } from 'react-native-reanimated';
+import { useSharedValue, useReducedMotion } from 'react-native-reanimated';
 import { Card } from './Card';
 import { Button } from '@/components/ui/Button';
 import { useTheme } from '@/theme/useTheme';

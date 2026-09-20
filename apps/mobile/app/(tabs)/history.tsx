@@ -13,15 +13,14 @@ import {
 import { useQuery } from '@tanstack/react-query';
 import { apiClient } from '@/api/client';
 import { useTheme } from '@/theme/useTheme';
-import type { DecisionHistoryResponse } from '@/api/types';
 
 export default function HistoryScreen() {
   const { colors, fontSize, fontWeight, spacing, radius } = useTheme();
 
-  const { data, isLoading, isError } = useQuery<DecisionHistoryResponse>({
+  const { data, isLoading, isError } = useQuery<any>({
     queryKey: ['decisions', 'history'],
     queryFn: async () => {
-      const { data } = await apiClient.get<DecisionHistoryResponse>(
+      const { data } = await apiClient.get<any>(
         '/decisions/history',
         { params: { page_size: 50 } },
       );

@@ -17,6 +17,7 @@ import {
   Dimensions,
 } from 'react-native';
 import { GestureDetector, Gesture } from 'react-native-gesture-handler';
+import { useReducedMotion } from 'react-native-reanimated';
 import { MediaImage } from './MediaImage';
 import { MediaVideo } from './MediaVideo';
 import { useTheme } from '@/theme/useTheme';
@@ -142,8 +143,10 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   dot: {
+    width: 6,
     height: 6,
     borderRadius: 3,
-    transition: '0.2s',
+    backgroundColor: 'rgba(255,255,255,0.4)',
+    marginHorizontal: 3,
   },
 });
