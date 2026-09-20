@@ -35,7 +35,12 @@ function AuthGuard({ children }: { children: React.ReactNode }) {
     const checkAuth = async () => {
       // On app start, check if a refresh token exists in SecureStore
       // If so, attempt to refresh and get an access token
-      const refreshToken = await SecureStore.getItemAsync('refresh_token');
+      let refreshToken = null;
+      try {
+        refreshToken = await SecureStore.getItemAsync('refresh_token');
+      } catch (e) {
+        console.warn('Failed to read SecureStore', e);
+      }
       const inAuthGroup = segments[0] === 'auth';
 
       if (!refreshToken && !inAuthGroup) {
