@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SwipeDeck",
-    "slug": "swiped",
+    "name": "tncan",
+    "slug": "tncan",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,20 +9,20 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#F5F5F4"
+      "backgroundColor": "#1C1917"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.swiped.app",
+      "bundleIdentifier": "com.tncan.app",
       "buildNumber": "1"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#F5F5F4"
+        "backgroundColor": "#1C1917"
       },
-      "package": "com.swiped.app",
+      "package": "com.tncan.app",
       "versionCode": 1,
       "permissions": ["INTERNET"]
     },
@@ -41,7 +41,7 @@
       ],
       "expo-secure-store"
     ],
-    "scheme": "swiped",
+    "scheme": "tncan",
     "extra": {
       "router": {
         "origin": false
